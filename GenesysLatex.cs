@@ -47,11 +47,10 @@ namespace genesys_latex
                 Repository repository = repositoryConfiguration.GetRepository();
                 IProject project = repository.GetProject(projectName);
 
-                // Process Tables
+                // Process JSON input for Tables and Diagrams
                 CreateTables(project, outputPath);
-                // CSRM #1 - System Description
-                // SystemDescription(project, outputPath);
-                
+                CreateDiagrams(project, outputPath);
+                             
                 client.Dispose();
                 Console.WriteLine("Close Connection");
                 System.Environment.Exit(0);
@@ -61,12 +60,17 @@ namespace genesys_latex
                 Console.WriteLine("Usage: <project name> <output path>");
             }
         }
+        public class Diagram
+        {
+            public string GnsxCategory { get; set; }
+            public string DiagramType { get; set; }
+            public string Scale { get; set; }
+        }
         public class Column
         {
             public string Heading { get; set; }
             public string GnsxType { get; set; }
             public string GnsxName { get; set; }
-
         }
         public class Table
         {
@@ -287,38 +291,26 @@ namespace genesys_latex
             }
         }
 
-
-       
-        static void SystemDescription( IProject project, string outputPath)
+        static void CreateDiagrams(IProject project, string outputPath)
         {
-            Architecture(project, outputPath);
-            UseCase(project, outputPath);
+            IList<Diagram> diagrams = JsonConvert.DeserializeObject<List<Diagram>>(File.ReadAllText(@"..\..\figures.json"));
+            foreach (Diagram diagram in diagrams)
+            {
+                IFolder cateogoryFolder = project.GetFolder("Category");
+                IEntity diagramCategory = cateogoryFolder.GetEntity(diagram.GnsxCategory);
+
+                IEnumerable<IEntity> entityList = diagramCategory.GetRelationshipTargets("categorizes");
+
+                Enum.TryParse(diagram.DiagramType, out EntityDiagramType type);
+                Enum.TryParse(diagram.Scale, out DiagramScale scale);
+
+                foreach (IEntity entity in entityList)
+                {
+                    OutputDiagram(project, type, scale, entity, outputPath);
+                }
+            }
         }
         
-        static void Architecture(IProject project, string outputPath)
-        {
-            IFolder cateogoryFolder = project.GetFolder("Category");
-            IEntity systemArchitectureCategory = cateogoryFolder.GetEntity("CSRM: Architecture");
-
-            IEnumerable<IEntity> componentList = systemArchitectureCategory.GetRelationshipTargets("categorizes");
-
-            foreach (IEntity component in componentList)
-            {
-                OutputDiagram(project, EntityDiagramType.PhysicalBlock, DiagramScale.LineWidth, component, outputPath);
-            }
-        }
-        static void UseCase(IProject project, string outputPath)
-        {
-            IFolder cateogoryFolder = project.GetFolder("Category");
-            IEntity systemUseCaseCategory = cateogoryFolder.GetEntity("CSRM: Use Case");
-
-            IEnumerable<IEntity> usecaseList = systemUseCaseCategory.GetRelationshipTargets("categorizes");
-
-            foreach (IEntity usecase in usecaseList)
-            {
-                OutputDiagram(project, EntityDiagramType.UseCase, DiagramScale.ThreeQuarter, usecase, outputPath);
-            }
-        }
         static void OutputDiagram(IProject project, EntityDiagramType diagramType, DiagramScale scale,
             IEntity diagramEntity, string outputPath)
         {

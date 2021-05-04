@@ -1,0 +1,12 @@
+[
+	{
+		"GnsxCategory": "CSRM: Architecture",
+		"DiagramType": "PhysicalBlock",
+		"Scale": "LineWidth"
+	},
+	{
+		"GnsxCategory": "CSRM: Use Case",
+		"DiagramType": "UseCase",
+		"Scale": "ThreeQuarter"
+	}
+]
