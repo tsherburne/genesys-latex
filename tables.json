@@ -129,5 +129,63 @@
                 "GnsxName": "protects against"
             }
         ]
+    },
+    {
+        "Name": "TE Cyber Resilience Verification Table",
+        "File": "tecyberverification.tex",
+        "Caption": "TE Cyber Resilience Verification Requirements",
+        "Label": "table:te-cyber-resilence",
+        "GnsxCategory": "TE: Cyber Resilience",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Verification Requirment",
+        "Columns": [
+            {
+                "Heading": "verifies: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "verifies"
+            },
+            {
+                "Heading": "specifies: Test Activity / Configuration",
+                "GnsxType": "relation",
+                "GnsxName": "specifies"
+            }
+        ]
+    },
+    {
+        "Name": "Test Configuration Table",
+        "File": "testconfiguration.tex",
+        "Caption": "Test Configurations",
+        "Label": "table:te-test-configuration",
+        "GnsxCategory": "TE: Configurations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Test Configuration",
+        "Columns": [
+            {
+                "Heading": "formed by: Component / Resilient Mode",
+                "GnsxType": "relation",
+                "GnsxName": "formed by"
+            },
+            {
+                "Heading": "employed by: Test Activity",
+                "GnsxType": "relation",
+                "GnsxName": "employed by"
+            }
+        ]
+    },
+    {
+        "Name": "Loss Scenario Requirements Table",
+        "File": "lossrequirement.tex",
+        "Caption": "Loss Scenario Requirments",
+        "Label": "table:te-lossrequirements",
+        "GnsxCategory": "STPA: Loss Scenario",
+        "ColumnFormat": "l l",
+        "SelfColumnHeading": "Loss Scenario",
+        "Columns": [
+            {
+                "Heading": "elicits: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "elicits"
+            }
+        ]
     }
 ]

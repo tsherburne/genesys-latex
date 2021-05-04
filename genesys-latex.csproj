@@ -86,6 +86,9 @@
     <Reference Include="Vitech.Genesys.Windows.Diagrams">
       <HintPath>..\..\..\..\..\Program Files (x86)\Vitech\GENESYS 2020 R2 Collaborative Edition\Vitech.Genesys.Windows.Diagrams.dll</HintPath>
     </Reference>
+    <Reference Include="Vitech.Genesys.Windows.Diagrams.Behavioral">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Vitech\GENESYS 2020 R2 Collaborative Edition\Vitech.Genesys.Windows.Diagrams.Behavioral.dll</HintPath>
+    </Reference>
     <Reference Include="Vitech.Genesys.Windows.Diagrams.Block">
       <HintPath>..\..\..\..\..\Program Files (x86)\Vitech\GENESYS 2020 R2 Collaborative Edition\Vitech.Genesys.Windows.Diagrams.Block.dll</HintPath>
     </Reference>

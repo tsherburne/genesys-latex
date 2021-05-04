@@ -314,7 +314,8 @@ namespace genesys_latex
         static void OutputDiagram(IProject project, EntityDiagramType diagramType, DiagramScale scale,
             IEntity diagramEntity, string outputPath)
         {
-            DiagramExporter diagramExporter = new DiagramExporter(diagramEntity, diagramType, null)
+            IStoredView view = diagramEntity.GetDefaultStoredView(diagramType, null);
+            DiagramExporter diagramExporter = new DiagramExporter(view)
             {
                 Background = Colors.White
             };

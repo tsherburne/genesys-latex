@@ -8,5 +8,10 @@
 		"GnsxCategory": "CSRM: Use Case",
 		"DiagramType": "UseCase",
 		"Scale": "ThreeQuarter"
+	},
+	{
+		"GnsxCategory": "TE: Activity",
+		"DiagramType": "EFFBD",
+		"Scale": "LineWidth"
 	}
 ]
