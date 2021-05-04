@@ -1,0 +1,133 @@
+[
+    {
+        "Name": "STPA Loss Table",
+        "File": "loss.tex",
+        "Caption": "STPA Losses",
+        "Label": "table:stpa-losses",
+        "GnsxCategory": "STPA: Loss",
+        "ColumnFormat": "l c l",
+        "SelfColumnHeading": "Loss",
+        "Columns": [
+            {
+                "Heading": "Priority",
+                "GnsxType": "attribute",
+                "GnsxName": "priority"
+            },
+            {
+                "Heading": "is caused by: Hazard",
+                "GnsxType": "relation",
+                "GnsxName": "is caused by"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Hazard Table",
+        "File": "hazard.tex",
+        "Caption": "STPA Hazards",
+        "Label": "table:stpa-hazards",
+        "GnsxCategory": "STPA: Hazard",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Hazard",
+        "Columns": [
+            {
+                "Heading": "leads to: Loss",
+                "GnsxType": "relation",
+                "GnsxName": "leads to"
+            },
+            {
+                "Heading": "is caused by: Hazardous Action",
+                "GnsxType": "relation",
+                "GnsxName": "is caused by"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Hazardous Action Table",
+        "File": "hazardousaction.tex",
+        "Caption": "STPA Hazardous Actions",
+        "Label": "table:stpa-hazardous-actions",
+        "GnsxCategory": "STPA: Hazardous Action",
+        "ColumnFormat": "p{0.15\\textwidth} p{0.2\\textwidth} p{0.25\\textwidth} p{0.25\\textwidth}",
+        "SelfColumnHeading": "Hazardous Action",
+        "Columns": [
+            {
+                "Heading": "leads to: Hazard",
+                "GnsxType": "relation",
+                "GnsxName": "leads to"
+            },
+            {
+                "Heading": "is caused by: Loss Scenario",
+                "GnsxType": "relation",
+                "GnsxName": "is caused by"
+            },
+            {
+                "Heading": "variation of: Control Action",
+                "GnsxType": "relation",
+                "GnsxName": "variation of"
+            }
+        ]
+    },
+    {
+        "Name": "CSRM Resilient Modes Table",
+        "File": "resilientmode.tex",
+        "Caption": "CSRM Resilient Modes",
+        "Label": "table:csrm-resilient-modes",
+        "GnsxCategory": "CSRM: Resilient Modes",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Resilient Mode",
+        "Columns": [
+            {
+                "Heading": "provides reconfiguration for: Loss Scenario",
+                "GnsxType": "relation",
+                "GnsxName": "provides reconfiguration for"
+            },
+            {
+                "Heading": "provides alternate operation for: Component",
+                "GnsxType": "relation",
+                "GnsxName": "provides alternate operation for"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Loss Scenario Table",
+        "File": "lossscenario.tex",
+        "Caption": "STPA Loss Scenarios",
+        "Label": "table:stpa-lossscenarios",
+        "GnsxCategory": "STPA: Loss Scenario",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Loss Scenario",
+        "Columns": [
+            {
+                "Heading": "leads to: Hazardous Action",
+                "GnsxType": "relation",
+                "GnsxName": "leads to"
+            },
+            {
+                "Heading": "reconfigures using: Resilient Mode",
+                "GnsxType": "relation",
+                "GnsxName": "reconfigures using"
+            }
+        ]
+    },
+    {
+        "Name": "CSRM Remediations Table",
+        "File": "remediation.tex",
+        "Caption": "CSRM Remediations",
+        "Label": "table:csrm-remediation",
+        "GnsxCategory": "CSRM: Remediations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Remediation",
+        "Columns": [
+            {
+                "Heading": "is implementation of: Hygiene Practice",
+                "GnsxType": "relation",
+                "GnsxName": "is implementation of"
+            },
+            {
+                "Heading": "protects against: Attack Vector",
+                "GnsxType": "relation",
+                "GnsxName": "protects against"
+            }
+        ]
+    }
+]
