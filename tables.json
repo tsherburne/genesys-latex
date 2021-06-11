@@ -187,5 +187,63 @@
                 "GnsxName": "elicits"
             }
         ]
+    },
+    {
+        "Name": "Mission Engineering Requirments Table",
+        "File": "missionengineering.tex",
+        "Caption": "Mission Engineering Requirements",
+        "Label": "table:me-requirments",
+        "GnsxCategory": "CSRM: Mission Description",
+        "ColumnFormat": "p{0.5\\textwidth} c c",
+        "SelfColumnHeading": "Mission Requirement",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "attribute",
+                "GnsxName": "type"
+            },
+            {
+                "Heading": "Origin",
+                "GnsxType": "attribute",
+                "GnsxName": "origin"
+            }
+        ]
+    },
+    {
+        "Name": "System Requirments Table",
+        "File": "systemrequirement.tex",
+        "Caption": "Silverfish System Requirements",
+        "Label": "table:system-requirments",
+        "GnsxCategory": "SE: System Requirements",
+        "ColumnFormat": "p{0.5\\textwidth} c c",
+        "SelfColumnHeading": "System Requirement",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "attribute",
+                "GnsxName": "type"
+            },
+            {
+                "Heading": "Origin",
+                "GnsxType": "attribute",
+                "GnsxName": "origin"
+            }
+        ]
+    },
+    {
+        "Name": "System Structure Table",
+        "File": "systemstructure.tex",
+        "Caption": "Silverfish System Structure Items",
+        "Label": "table:system-structure",
+        "GnsxCategory": "SE: System Structure",
+        "ColumnFormat": "p{0.5\\textwidth} c",
+        "SelfColumnHeading": "System Structure",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "class",
+                "GnsxName": ""
+            }
+        ]
     }
 ]

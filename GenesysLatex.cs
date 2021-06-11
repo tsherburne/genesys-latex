@@ -166,6 +166,11 @@ namespace genesys_latex
                             outLine += Environment.NewLine + @"    &" 
                                         + entity.GetAttribute(column.GnsxName).ToString();
                         }
+                        if (column.GnsxType == "class")
+                        {
+                            outLine += Environment.NewLine + @"    &"
+                                        + entity.GetEntityDefinition().Name;
+                        }
                     }
                     int numRelCol = 0;
                     foreach (Column column in table.Columns)
