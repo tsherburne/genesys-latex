@@ -164,7 +164,7 @@ namespace genesys_latex
                         if (column.GnsxType == "attribute")
                         {
                             outLine += Environment.NewLine + @"    &" 
-                                        + entity.GetAttribute(column.GnsxName).ToString();
+                                        + EscapeString(entity.GetAttribute(column.GnsxName).ToString());
                         }
                         if (column.GnsxType == "class")
                         {
@@ -208,17 +208,17 @@ namespace genesys_latex
                                 {
                                     IEntity col2Entity = (IEntity)colLists[2].CurrentItem;
                                     outLine += string.Format(@"{0}:{1}&{2}:{3}&{4}:{5}\\",
-                                        col0Entity.GetAttribute("number").ToString(), col0Entity.Name,
-                                        col1Entity.GetAttribute("number").ToString(), col1Entity.Name,
-                                        col2Entity.GetAttribute("number").ToString(), col2Entity.Name);
+                                        col0Entity.GetAttribute("number").ToString(), EscapeString(col0Entity.Name),
+                                        col1Entity.GetAttribute("number").ToString(), EscapeString(col1Entity.Name),
+                                        col2Entity.GetAttribute("number").ToString(), EscapeString(col2Entity.Name));
 
                                     colLists[2].MoveCurrentToNext();
                                 }
                                 else
                                 {
                                     outLine += string.Format(@"{0}:{1}&{2}:{3}",
-                                        col0Entity.GetAttribute("number").ToString(), col0Entity.Name,
-                                        col1Entity.GetAttribute("number").ToString(), col1Entity.Name);
+                                        col0Entity.GetAttribute("number").ToString(), EscapeString(col0Entity.Name),
+                                        col1Entity.GetAttribute("number").ToString(), EscapeString(col1Entity.Name));
                                     outLine += new String('&', numRelCol - 2) + @"\\";
 
                                 }
@@ -230,15 +230,15 @@ namespace genesys_latex
                                 {
                                     IEntity col2Entity = (IEntity)colLists[2].CurrentItem;
                                     outLine += string.Format(@"{0}:{1}&&{2}:{3}\\",
-                                        col0Entity.GetAttribute("number").ToString(), col0Entity.Name,
-                                        col2Entity.GetAttribute("number").ToString(), col2Entity.Name);
+                                        col0Entity.GetAttribute("number").ToString(), EscapeString(col0Entity.Name),
+                                        col2Entity.GetAttribute("number").ToString(), EscapeString(col2Entity.Name));
 
                                     colLists[2].MoveCurrentToNext();
                                 }
                                 else
                                 {
                                     outLine += string.Format(@"{0}:{1}",
-                                        col0Entity.GetAttribute("number").ToString(), col0Entity.Name);
+                                        col0Entity.GetAttribute("number").ToString(), EscapeString(col0Entity.Name));
                                     outLine += new String('&', numRelCol - 1) + @"\\";
                                 }
                             }
@@ -253,15 +253,15 @@ namespace genesys_latex
                                 {
                                     IEntity col2Entity = (IEntity)colLists[2].CurrentItem;
                                     outLine += string.Format(@"&{0}:{1}&{2}:{3}\\",
-                                        col1Entity.GetAttribute("number").ToString(), col1Entity.Name,
-                                        col2Entity.GetAttribute("number").ToString(), col2Entity.Name);
+                                        col1Entity.GetAttribute("number").ToString(), EscapeString(col1Entity.Name),
+                                        col2Entity.GetAttribute("number").ToString(), EscapeString(col2Entity.Name));
 
                                     colLists[2].MoveCurrentToNext();
                                 }
                                 else
                                 {
                                     outLine += string.Format(@"&{0}:{1}",
-                                        col1Entity.GetAttribute("number").ToString(), col1Entity.Name);
+                                        col1Entity.GetAttribute("number").ToString(), EscapeString(col1Entity.Name));
                                     outLine += new String('&', numRelCol - 2) + @"\\";
                                 }
                                 colLists[1].MoveCurrentToNext();
@@ -272,7 +272,7 @@ namespace genesys_latex
                                 {
                                     IEntity col2Entity = (IEntity)colLists[2].CurrentItem;
                                     outLine += string.Format(@"&&{0}:{1}\\",
-                                        col2Entity.GetAttribute("number").ToString(), col2Entity.Name);
+                                        col2Entity.GetAttribute("number").ToString(), EscapeString(col2Entity.Name));
 
                                     colLists[2].MoveCurrentToNext();
                                 }

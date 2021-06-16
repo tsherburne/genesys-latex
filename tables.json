@@ -233,16 +233,68 @@
     {
         "Name": "System Structure Table",
         "File": "systemstructure.tex",
-        "Caption": "Silverfish System Structure Items",
+        "Caption": "Silverfish System Components",
         "Label": "table:system-structure",
         "GnsxCategory": "SE: System Structure",
-        "ColumnFormat": "p{0.5\\textwidth} c",
-        "SelfColumnHeading": "System Structure",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "System Component",
         "Columns": [
             {
-                "Heading": "Type",
-                "GnsxType": "class",
-                "GnsxName": ""
+                "Heading": "Description",
+                "GnsxType": "attribute",
+                "GnsxName": "description"
+            },
+            {
+                "Heading": "performs: Function",
+                "GnsxType": "relation",
+                "GnsxName": "performs"
+            }
+        ]
+    },
+    {
+        "Name": "System Links Table",
+        "File": "systemlinks.tex",
+        "Caption": "Silverfish System Links",
+        "Label": "table:system-link",
+        "GnsxCategory": "SE: System Links",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth}  p{0.3\\textwidth}",
+        "SelfColumnHeading": "System Link",
+        "Columns": [
+            {
+                "Heading": "connects to: Component",
+                "GnsxType": "relation",
+                "GnsxName": "connects to"
+            },
+            {
+                "Heading": "transfers: Item",
+                "GnsxType": "relation",
+                "GnsxName": "transfers"
+            }
+        ]
+    },
+    {
+        "Name": "System Behavior Table",
+        "File": "systembehavior.tex",
+        "Caption": "Silverfish System Functions",
+        "Label": "table:system-behavior",
+        "GnsxCategory": "SE: System Behavior",
+        "ColumnFormat": "p{0.2\\textwidth} p{0.3\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+        "SelfColumnHeading": "System Function",
+        "Columns": [
+            {
+                "Heading": "Description",
+                "GnsxType": "attribute",
+                "GnsxName": "description"
+            },
+            {
+                "Heading": "decomposed by: Function",
+                "GnsxType": "relation",
+                "GnsxName": "decomposed by"
+            },
+            {
+                "Heading": "triggered by: Control Action",
+                "GnsxType": "relation",
+                "GnsxName": "triggered by"
             }
         ]
     }
