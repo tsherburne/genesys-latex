@@ -297,5 +297,47 @@
                 "GnsxName": "triggered by"
             }
         ]
+    },
+    {
+        "Name": "Sentinel Remediations Table",
+        "File": "sentinelremediation.tex",
+        "Caption": "Sentinel-based Remediations",
+        "Label": "table:sentinel-remediation",
+        "GnsxCategory": "CSRM: Sentinel Remediations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Remediation",
+        "Columns": [
+            {
+                "Heading": "protects against: LS/AV",
+                "GnsxType": "relation",
+                "GnsxName": "protects against"
+            },
+            {
+                "Heading": "elicits: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "elicits"
+            }
+        ]
+    },
+    {
+        "Name": "Loss Scenerio Elicted Requirements Table",
+        "File": "lossscenarioelicited.tex",
+        "Caption": "Loss Scenario Elicited Requirments",
+        "Label": "table:lossscenario-elicited",
+        "GnsxCategory": "LS: Elicited",
+        "ColumnFormat": "p{0.4\\textwidth} p{0.1\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Requirement",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "attribute",
+                "GnsxName": "type"
+            },
+            {
+                "Heading": "elicited by: LS",
+                "GnsxType": "relation",
+                "GnsxName": "elicited by"
+            }
+        ]
     }
 ]
