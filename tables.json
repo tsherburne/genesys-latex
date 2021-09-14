@@ -172,22 +172,22 @@
             }
         ]
     },
-    {
-        "Name": "Loss Scenario Requirements Table",
-        "File": "lossrequirement.tex",
-        "Caption": "Loss Scenario Requirments",
-        "Label": "table:te-lossrequirements",
-        "GnsxCategory": "STPA: Loss Scenario",
-        "ColumnFormat": "l l",
-        "SelfColumnHeading": "Loss Scenario",
-        "Columns": [
-            {
-                "Heading": "elicits: Requirement",
-                "GnsxType": "relation",
-                "GnsxName": "elicits"
-            }
-        ]
-    },
+  {
+    "Name": "Loss Scenario Requirements Table",
+    "File": "lossrequirement.tex",
+    "Caption": "Loss Scenario Requirements",
+    "Label": "table:te-lossrequirements",
+    "GnsxCategory": "STPA: Loss Scenario",
+    "ColumnFormat": "l p{0.6\\textwidth}",
+    "SelfColumnHeading": "Loss Scenario",
+    "Columns": [
+      {
+        "Heading": "elicits: Requirement",
+        "GnsxType": "relation",
+        "GnsxName": "elicits"
+      }
+    ]
+  },
     {
         "Name": "Mission Engineering Requirments Table",
         "File": "missionengineering.tex",
@@ -319,25 +319,77 @@
             }
         ]
     },
-    {
-        "Name": "Loss Scenerio Elicted Requirements Table",
-        "File": "lossscenarioelicited.tex",
-        "Caption": "Loss Scenario Elicited Requirments",
-        "Label": "table:lossscenario-elicited",
-        "GnsxCategory": "LS: Elicited",
-        "ColumnFormat": "p{0.4\\textwidth} p{0.1\\textwidth} p{0.3\\textwidth}",
-        "SelfColumnHeading": "Requirement",
-        "Columns": [
-            {
-                "Heading": "Type",
-                "GnsxType": "attribute",
-                "GnsxName": "type"
-            },
-            {
-                "Heading": "elicited by: LS",
-                "GnsxType": "relation",
-                "GnsxName": "elicited by"
-            }
-        ]
-    }
+  {
+    "Name": "Loss Scenerio Elicted Requirements Table",
+    "File": "lossscenarioelicited.tex",
+    "Caption": "Loss Scenario Elicited Requirments",
+    "Label": "table:lossscenario-elicited",
+    "GnsxCategory": "LS: Elicited",
+    "ColumnFormat": "p{0.4\\textwidth} p{0.1\\textwidth} p{0.3\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      }
+    ]
+  },
+  {
+    "Name": "Loss Scenerio Sentinel:CSA Elicted Requirements Table",
+    "File": "lossscenarioelicited-csa.tex",
+    "Caption": "Loss Scenario Sentinel:CSA Elicited Requirments",
+    "Label": "table:lossscenario-elicited-csa",
+    "GnsxCategory": "LS: Elicited CSA:SEN",
+    "ColumnFormat": "p{0.3\\textwidth} p{0.1\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      },
+      {
+        "Heading": "refines: Requirment",
+        "GnsxType": "relation",
+        "GnsxName": "refines"
+      }
+    ]
+  },
+  {
+    "Name": "Loss Scenerio Test Support System:CSA Elicted Requirements Table",
+    "File": "lossscenarioelicited-csa-tss.tex",
+    "Caption": "Loss Scenario Test Support System:CSA Elicited Requirments",
+    "Label": "table:lossscenario-elicited-csa-tss",
+    "GnsxCategory": "LS: Elicited CSA:TSS",
+    "ColumnFormat": "p{0.3\\textwidth} p{0.1\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      },
+      {
+        "Heading": "refines: Requirment",
+        "GnsxType": "relation",
+        "GnsxName": "refines"
+      }
+    ]
+  }
 ]
