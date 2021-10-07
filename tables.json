@@ -16,7 +16,7 @@
             {
                 "Heading": "is caused by: Hazard",
                 "GnsxType": "relation",
-                "GnsxName": "is caused by"
+                "GnsxName": "ma: is caused by"
             }
         ]
     },
@@ -32,12 +32,12 @@
             {
                 "Heading": "leads to: Loss",
                 "GnsxType": "relation",
-                "GnsxName": "leads to"
+                "GnsxName": "ma: leads to"
             },
             {
                 "Heading": "is caused by: Hazardous Action",
                 "GnsxType": "relation",
-                "GnsxName": "is caused by"
+                "GnsxName": "ma: is caused by"
             }
         ]
     },
@@ -53,17 +53,17 @@
             {
                 "Heading": "leads to: Hazard",
                 "GnsxType": "relation",
-                "GnsxName": "leads to"
+                "GnsxName": "ma: leads to"
             },
             {
                 "Heading": "is caused by: Loss Scenario",
                 "GnsxType": "relation",
-                "GnsxName": "is caused by"
+                "GnsxName": "ma: is caused by"
             },
             {
                 "Heading": "variation of: Control Action",
                 "GnsxType": "relation",
-                "GnsxName": "variation of"
+                "GnsxName": "ma: variation of"
             }
         ]
     },
@@ -79,12 +79,12 @@
             {
                 "Heading": "provides reconfiguration for: Loss Scenario",
                 "GnsxType": "relation",
-                "GnsxName": "provides reconfiguration for"
+                "GnsxName": "ma: provides reconfiguration for"
             },
             {
                 "Heading": "provides alternate operation for: Component",
                 "GnsxType": "relation",
-                "GnsxName": "provides alternate operation for"
+                "GnsxName": "ma: provides alternate operation for"
             }
         ]
     },
@@ -100,12 +100,12 @@
             {
                 "Heading": "leads to: Hazardous Action",
                 "GnsxType": "relation",
-                "GnsxName": "leads to"
+                "GnsxName": "ma: leads to"
             },
             {
                 "Heading": "reconfigures using: Resilient Mode",
                 "GnsxType": "relation",
-                "GnsxName": "reconfigures using"
+                "GnsxName": "ma: reconfigures using"
             }
         ]
     },
@@ -121,12 +121,12 @@
             {
                 "Heading": "is implementation of: Hygiene Practice",
                 "GnsxType": "relation",
-                "GnsxName": "is implementation of"
+                "GnsxName": "ma: is implementation of"
             },
             {
                 "Heading": "protects against: Attack Vector",
                 "GnsxType": "relation",
-                "GnsxName": "protects against"
+                "GnsxName": "ma: protects against"
             }
         ]
     },
@@ -172,22 +172,22 @@
             }
         ]
     },
-  {
-    "Name": "Loss Scenario Requirements Table",
-    "File": "lossrequirement.tex",
-    "Caption": "Loss Scenario Requirements",
-    "Label": "table:te-lossrequirements",
-    "GnsxCategory": "STPA: Loss Scenario",
-    "ColumnFormat": "l p{0.6\\textwidth}",
-    "SelfColumnHeading": "Loss Scenario",
-    "Columns": [
-      {
-        "Heading": "elicits: Requirement",
-        "GnsxType": "relation",
-        "GnsxName": "elicits"
-      }
-    ]
-  },
+    {
+        "Name": "Loss Scenario Requirements Table",
+        "File": "lossrequirement.tex",
+        "Caption": "Loss Scenario Requirements",
+        "Label": "table:te-lossrequirements",
+        "GnsxCategory": "STPA: Loss Scenario",
+        "ColumnFormat": "l p{0.6\\textwidth}",
+        "SelfColumnHeading": "Loss Scenario",
+        "Columns": [
+            {
+                "Heading": "elicits: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "elicits"
+            }
+        ]
+    },
     {
         "Name": "Mission Engineering Requirments Table",
         "File": "missionengineering.tex",
@@ -310,7 +310,7 @@
             {
                 "Heading": "protects against: LS/AV",
                 "GnsxType": "relation",
-                "GnsxName": "protects against"
+                "GnsxName": "ma: protects against"
             },
             {
                 "Heading": "elicits: Requirement",
