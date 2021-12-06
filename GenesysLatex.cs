@@ -37,10 +37,12 @@ namespace genesys_latex
             {
                 projectName = args[0];
                 outputPath = args[1];
+                string path = Path.GetFullPath(outputPath);
+
                 // Setup Connection to GENESYS
                 client = new ClientModel();
                 RepositoryConfiguration repositoryConfiguration = client.GetKnownRepositories().LocalRepository;
-                GenesysClientCredentials credentials = new GenesysClientCredentials("api-user", "api-pwd", AuthenticationType.GENESYS);
+                GenesysClientCredentials credentials = new GenesysClientCredentials("utility", "", AuthenticationType.GENESYS);
                 repositoryConfiguration.Login(credentials);
                 Console.WriteLine("Logged In!");
 

@@ -1,0 +1,395 @@
+[
+    {
+        "Name": "STPA Loss Table",
+        "File": "loss.tex",
+        "Caption": "STPA Losses",
+        "Label": "table:stpa-losses",
+        "GnsxCategory": "STPA: Loss",
+        "ColumnFormat": "l c l",
+        "SelfColumnHeading": "Loss",
+        "Columns": [
+            {
+                "Heading": "Priority",
+                "GnsxType": "attribute",
+                "GnsxName": "priority"
+            },
+            {
+                "Heading": "is caused by: Hazard",
+                "GnsxType": "relation",
+                "GnsxName": "ma: is caused by"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Hazard Table",
+        "File": "hazard.tex",
+        "Caption": "STPA Hazards",
+        "Label": "table:stpa-hazards",
+        "GnsxCategory": "STPA: Hazard",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Hazard",
+        "Columns": [
+            {
+                "Heading": "leads to: Loss",
+                "GnsxType": "relation",
+                "GnsxName": "ma: leads to"
+            },
+            {
+                "Heading": "is caused by: Hazardous Action",
+                "GnsxType": "relation",
+                "GnsxName": "ma: is caused by"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Hazardous Action Table",
+        "File": "hazardousaction.tex",
+        "Caption": "STPA Hazardous Actions",
+        "Label": "table:stpa-hazardous-actions",
+        "GnsxCategory": "STPA: Hazardous Action",
+        "ColumnFormat": "p{0.15\\textwidth} p{0.2\\textwidth} p{0.25\\textwidth} p{0.25\\textwidth}",
+        "SelfColumnHeading": "Hazardous Action",
+        "Columns": [
+            {
+                "Heading": "leads to: Hazard",
+                "GnsxType": "relation",
+                "GnsxName": "ma: leads to"
+            },
+            {
+                "Heading": "is caused by: Loss Scenario",
+                "GnsxType": "relation",
+                "GnsxName": "ma: is caused by"
+            },
+            {
+                "Heading": "variation of: Control Action",
+                "GnsxType": "relation",
+                "GnsxName": "ma: variation of"
+            }
+        ]
+    },
+    {
+        "Name": "CSRM Resilient Modes Table",
+        "File": "resilientmode.tex",
+        "Caption": "CSRM Resilient Modes",
+        "Label": "table:csrm-resilient-modes",
+        "GnsxCategory": "CSRM: Resilient Modes",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Resilient Mode",
+        "Columns": [
+            {
+                "Heading": "provides reconfiguration for: Loss Scenario",
+                "GnsxType": "relation",
+                "GnsxName": "ma: provides reconfiguration for"
+            },
+            {
+                "Heading": "provides alternate operation for: Component",
+                "GnsxType": "relation",
+                "GnsxName": "ma: provides alternate operation for"
+            }
+        ]
+    },
+    {
+        "Name": "STPA Loss Scenario Table",
+        "File": "lossscenario.tex",
+        "Caption": "STPA Loss Scenarios",
+        "Label": "table:stpa-lossscenarios",
+        "GnsxCategory": "STPA: Loss Scenario",
+        "ColumnFormat": "l l l",
+        "SelfColumnHeading": "Loss Scenario",
+        "Columns": [
+            {
+                "Heading": "leads to: Hazardous Action",
+                "GnsxType": "relation",
+                "GnsxName": "ma: leads to"
+            },
+            {
+                "Heading": "reconfigures using: Resilient Mode",
+                "GnsxType": "relation",
+                "GnsxName": "ma: reconfigures using"
+            }
+        ]
+    },
+    {
+        "Name": "CSRM Remediations Table",
+        "File": "remediation.tex",
+        "Caption": "CSRM Remediations",
+        "Label": "table:csrm-remediation",
+        "GnsxCategory": "CSRM: Remediations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Remediation",
+        "Columns": [
+            {
+                "Heading": "is implementation of: Hygiene Practice",
+                "GnsxType": "relation",
+                "GnsxName": "ma: is implementation of"
+            },
+            {
+                "Heading": "protects against: Attack Vector",
+                "GnsxType": "relation",
+                "GnsxName": "ma: protects against"
+            }
+        ]
+    },
+    {
+        "Name": "TE Cyber Resilience Verification Table",
+        "File": "tecyberverification.tex",
+        "Caption": "TE Cyber Resilience Verification Requirements",
+        "Label": "table:te-cyber-resilence",
+        "GnsxCategory": "TE: Cyber Resilience",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Verification Requirment",
+        "Columns": [
+            {
+                "Heading": "verifies: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "verifies"
+            },
+            {
+                "Heading": "specifies: Test Activity / Configuration",
+                "GnsxType": "relation",
+                "GnsxName": "specifies"
+            }
+        ]
+    },
+    {
+        "Name": "Test Configuration Table",
+        "File": "testconfiguration.tex",
+        "Caption": "Test Configurations",
+        "Label": "table:te-test-configuration",
+        "GnsxCategory": "TE: Configurations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Test Configuration",
+        "Columns": [
+            {
+                "Heading": "formed by: Component / Resilient Mode",
+                "GnsxType": "relation",
+                "GnsxName": "formed by"
+            },
+            {
+                "Heading": "employed by: Test Activity",
+                "GnsxType": "relation",
+                "GnsxName": "employed by"
+            }
+        ]
+    },
+    {
+        "Name": "Loss Scenario Requirements Table",
+        "File": "lossrequirement.tex",
+        "Caption": "Loss Scenario Requirements",
+        "Label": "table:te-lossrequirements",
+        "GnsxCategory": "STPA: Loss Scenario",
+        "ColumnFormat": "l p{0.6\\textwidth}",
+        "SelfColumnHeading": "Loss Scenario",
+        "Columns": [
+            {
+                "Heading": "elicits: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "elicits"
+            }
+        ]
+    },
+    {
+        "Name": "Mission Engineering Requirments Table",
+        "File": "missionengineering.tex",
+        "Caption": "Mission Engineering Requirements",
+        "Label": "table:me-requirments",
+        "GnsxCategory": "CSRM: Mission Description",
+        "ColumnFormat": "p{0.5\\textwidth} c c",
+        "SelfColumnHeading": "Mission Requirement",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "attribute",
+                "GnsxName": "type"
+            },
+            {
+                "Heading": "Origin",
+                "GnsxType": "attribute",
+                "GnsxName": "origin"
+            }
+        ]
+    },
+    {
+        "Name": "System Requirments Table",
+        "File": "systemrequirement.tex",
+        "Caption": "Silverfish System Requirements",
+        "Label": "table:system-requirments",
+        "GnsxCategory": "SE: System Requirements",
+        "ColumnFormat": "p{0.5\\textwidth} c c",
+        "SelfColumnHeading": "System Requirement",
+        "Columns": [
+            {
+                "Heading": "Type",
+                "GnsxType": "attribute",
+                "GnsxName": "type"
+            },
+            {
+                "Heading": "Origin",
+                "GnsxType": "attribute",
+                "GnsxName": "origin"
+            }
+        ]
+    },
+    {
+        "Name": "System Structure Table",
+        "File": "systemstructure.tex",
+        "Caption": "Silverfish System Components",
+        "Label": "table:system-structure",
+        "GnsxCategory": "SE: System Structure",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "System Component",
+        "Columns": [
+            {
+                "Heading": "Description",
+                "GnsxType": "attribute",
+                "GnsxName": "description"
+            },
+            {
+                "Heading": "performs: Function",
+                "GnsxType": "relation",
+                "GnsxName": "performs"
+            }
+        ]
+    },
+    {
+        "Name": "System Links Table",
+        "File": "systemlinks.tex",
+        "Caption": "Silverfish System Links",
+        "Label": "table:system-link",
+        "GnsxCategory": "SE: System Links",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth}  p{0.3\\textwidth}",
+        "SelfColumnHeading": "System Link",
+        "Columns": [
+            {
+                "Heading": "connects to: Component",
+                "GnsxType": "relation",
+                "GnsxName": "connects to"
+            },
+            {
+                "Heading": "transfers: Item",
+                "GnsxType": "relation",
+                "GnsxName": "transfers"
+            }
+        ]
+    },
+    {
+        "Name": "System Behavior Table",
+        "File": "systembehavior.tex",
+        "Caption": "Silverfish System Functions",
+        "Label": "table:system-behavior",
+        "GnsxCategory": "SE: System Behavior",
+        "ColumnFormat": "p{0.2\\textwidth} p{0.3\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+        "SelfColumnHeading": "System Function",
+        "Columns": [
+            {
+                "Heading": "Description",
+                "GnsxType": "attribute",
+                "GnsxName": "description"
+            },
+            {
+                "Heading": "decomposed by: Function",
+                "GnsxType": "relation",
+                "GnsxName": "decomposed by"
+            },
+            {
+                "Heading": "triggered by: Control Action",
+                "GnsxType": "relation",
+                "GnsxName": "triggered by"
+            }
+        ]
+    },
+    {
+        "Name": "Sentinel Remediations Table",
+        "File": "sentinelremediation.tex",
+        "Caption": "Sentinel-based Remediations",
+        "Label": "table:sentinel-remediation",
+        "GnsxCategory": "CSRM: Sentinel Remediations",
+        "ColumnFormat": "p{0.3\\textwidth} p{0.3\\textwidth} p{0.3\\textwidth}",
+        "SelfColumnHeading": "Remediation",
+        "Columns": [
+            {
+                "Heading": "protects against: LS/AV",
+                "GnsxType": "relation",
+                "GnsxName": "ma: protects against"
+            },
+            {
+                "Heading": "elicits: Requirement",
+                "GnsxType": "relation",
+                "GnsxName": "elicits"
+            }
+        ]
+    },
+  {
+    "Name": "Loss Scenerio Elicted Requirements Table",
+    "File": "lossscenarioelicited.tex",
+    "Caption": "Loss Scenario Elicited Requirments",
+    "Label": "table:lossscenario-elicited",
+    "GnsxCategory": "LS: Elicited CSA:SYS",
+    "ColumnFormat": "p{0.4\\textwidth} p{0.1\\textwidth} p{0.3\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      }
+    ]
+  },
+  {
+    "Name": "Loss Scenerio Sentinel:CSA Elicted Requirements Table",
+    "File": "lossscenarioelicited-csa.tex",
+    "Caption": "Loss Scenario Sentinel:CSA Elicited Requirments",
+    "Label": "table:lossscenario-elicited-csa",
+    "GnsxCategory": "LS: Elicited CSA:SEN",
+    "ColumnFormat": "p{0.3\\textwidth} p{0.1\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      },
+      {
+        "Heading": "refines: Requirement",
+        "GnsxType": "relation",
+        "GnsxName": "refines"
+      }
+    ]
+  },
+  {
+    "Name": "Loss Scenerio Test Support System:CSA Elicted Requirements Table",
+    "File": "lossscenarioelicited-csa-tss.tex",
+    "Caption": "Loss Scenario Test Support System:CSA Elicited Requirments",
+    "Label": "table:lossscenario-elicited-csa-tss",
+    "GnsxCategory": "LS: Elicited CSA:TSS",
+    "ColumnFormat": "p{0.3\\textwidth} p{0.1\\textwidth} p{0.2\\textwidth} p{0.2\\textwidth}",
+    "SelfColumnHeading": "Requirement",
+    "Columns": [
+      {
+        "Heading": "Type",
+        "GnsxType": "attribute",
+        "GnsxName": "type"
+      },
+      {
+        "Heading": "elicited by: LS",
+        "GnsxType": "relation",
+        "GnsxName": "elicited by"
+      },
+      {
+        "Heading": "refines: Requirement",
+        "GnsxType": "relation",
+        "GnsxName": "refines"
+      }
+    ]
+  }
+]
